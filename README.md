@@ -7,8 +7,8 @@ http://www.elemhb.top/
 ## 原理说明
 1.红包链接上包含大红包的信息。
 如：https://h5.ele.me/hongbao/#hardware_id=&is_lucky_group=True&lucky_number=7&track_id=&platform=0&sn=29e6ac3a7d9d505a&theme_id=2121&device_id=
-可以发现lucky_number=7,即第7个是大红包。
-2.饿了么拼手气红包可以分享到微信或者qq后，都可以绑定或修改手机号。
+可以发现lucky_number=7,即第7个是大红包。</br>
+2.饿了么拼手气红包可以分享到微信或者qq后，都可以绑定或修改手机号。</br>
 3.饿了么每个红包最多可以被10个人领取，因此需要准备十个账号。如第7个是大红包，则用6个小号当垫子，到第7个时，切换成目标手机号领取即可。
 
 ## 使用教程
