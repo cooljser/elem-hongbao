@@ -19,12 +19,14 @@ http://www.elemhb.top/
 
 2. 修改config.js中的账号信息
 一共需要准备10个账号，因为一个红包一个用户最多领取一次。
-账号必须字段:
-openId: 公共平台id(微信||qq)
-sign: 饿了么账号id
-非必须字段：
-weixin_avatar：用户头像
-weixin_username：用户名称
+	```
+	账号必须字段:
+	openId: 公共平台id(微信||qq)
+	sign: 饿了么账号id
+	非必须字段：
+	weixin_avatar：用户头像
+	weixin_username：用户名称
+	```
 
 3. 如何获取openId、sign？
 	使用chrome手机调试模式打开红包链接，并设置device的User-Agent为
