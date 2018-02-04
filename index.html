@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>佛祖保佑~~~</title>
+    <style>
+        section {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px 0;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        div {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+        }
+
+        input {
+            padding: 0 0 0 4px;
+            margin: 0;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #ccc;
+            width: 200px;
+            height: 24px;
+            font-size: 20px;
+        }
+
+        span {
+            display: inline-block;
+            margin: 20px 0 0 153px;
+            height: 30px;
+            width: 80px;
+            border-radius: 6px;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            background-color: #F38181;
+            cursor: pointer;
+        }
+
+        .tip {
+            padding: 0 30px 0 30px;
+            margin: 30px 0 0 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .author, .other {
+            padding: 0 30px 0 30px;
+            margin: 6px 0 0 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .question {
+            padding: 0 30px 0 30px;
+            margin: 12px 0 0 0;
+            font-size: 14px;
+            color: #aaa;
+            line-height: 25px;
+        }
+
+        .img {
+            width: 120px;
+            height: 120px;
+            margin: 6px 0 0 30px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h4>饿了么大红包攻略</h4>
+        <div>
+            <label for="">红包链接</label>
+            <input type="text" name="url" id="url">    
+        </div>
+        <div>
+            <label for="">领取手机号</label>
+            <input type="text" name="mobile" id="mobile">    
+        </div>
+        <span onclick="submit()" id="btn">领取</span>
+        
+        <p class="question">如何获取红包链接？</br>
+        1.分享红包到qq，选择'我的电脑'，然后复制链接。</br>
+        2.分享红包到微信，在微信pc版中使用浏览器打开，然后复制链接。</p>
+
+        <p class="tip">目前领取速度较慢，大概半分钟左右，请耐心等待...</p>
+        <p class="author">作者:cooljser</p>
+        <p class="other">问题反馈q群: 246080018</p>
+        <p class="other">想要打赏的小伙伴可以使用微信扫描下面的二维码~~~</p>
+        <img src="wechat.png" class="img">
+        <p class="other">特别感谢: @宝婷、@会飞的猪、@CrazyVirusss</p>
+    </section>
+</body>
+<script>
+    function getById(id) {
+        return document.getElementById(id);
+    }
+
+    function submit() {
+        let hongbaoUrl = getById('url').value;
+        let mobile = getById('mobile').value;
+        if (hongbaoUrl && mobile) {
+            getHongbao({
+                url: hongbaoUrl,
+                mobile: mobile
+            });
+            getById('btn').style.backgroundColor = '#ccc';
+        }
+    }
+
+    function getHongbao(data) {
+        console.log(data)
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/getHongbao');
+        xhr.setRequestHeader("Content-Type","application/json");
+        xhr.send(JSON.stringify(data));
+
+        xhr.onload = function() {       
+            if (xhr.status == 200) {
+                let res = xhr.response;
+                let data = JSON.parse(res);
+                
+                alert(data.msg);
+                getById('btn').style.backgroundColor = '#F38181';
+            }
+        }
+        xhr.onerror = function(e) {
+            console.log(e);
+        }
+    }
+</script>
+</html>
