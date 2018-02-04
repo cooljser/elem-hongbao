@@ -42,7 +42,7 @@ http://www.elemhb.top/
 
 5. 进入项目目录，运行
 	```
-	node server.js
+	npm start
 	```
 	然后，浏览器访问localhost即可看到页面。
 
