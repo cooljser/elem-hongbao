@@ -1,0 +1,30 @@
+{
+  "name": "elem-hongbao",
+  "version": "1.0.0",
+  "description": "http://www.elemhb.top/",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cooljser/elem-hongbao.git"
+  },
+  "keywords": [
+    "elem",
+    "hongbao"
+  ],
+  "author": "cooljser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cooljser/elem-hongbao/issues"
+  },
+  "homepage": "https://github.com/cooljser/elem-hongbao#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0"
+  }
+}
