@@ -44,7 +44,7 @@ http://www.elemhb.top/
 	```
 	node server.js
 	```
-	然后，浏览器打开http://localhost即可看到页面。
+	然后，浏览器访问localhost即可看到页面。
 
 ## QQ交流
 
