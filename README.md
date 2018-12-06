@@ -1,3 +1,5 @@
+由于饿了么更新，所以此项目已失效，请移步至 https://github.com/mtdhb 查看新版
+
 # 让每个人都能抢到大红包
 http://www.elemhb.top/
 
