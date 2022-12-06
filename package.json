@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/cooljser/elem-hongbao#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "querystring": "^0.2.0",
     "request": "^2.83.0"
   }
